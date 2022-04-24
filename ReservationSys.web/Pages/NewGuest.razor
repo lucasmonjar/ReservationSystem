@@ -1,0 +1,56 @@
+@page "/newGuest"
+@using ReservationSystem;
+@inject NavigationManager NavManager
+
+
+<PageTitle>New Guest Account</PageTitle>
+
+<h1>Make a new Guest Account</h1>
+
+<section>
+    <p>Guest Information</p>
+    <label>First Name:</label>
+    <input type="text" @bind=firstName />
+    <label>Last Name:</label>
+    <input type="text" @bind=lastName />
+    <p style="color: red;">@nameError</p><br />
+    <br />
+    <p>Contact Information:</p>
+    <label>PhoneNumber:</label>
+    <input type="number" @bind=phoneNumber />
+    <p style="color: red;">@phoneError</p><br />
+    <label>Email Address:</label>
+    <input type="text" @bind=email /><br />
+    <p style="color: red;">@emailError</p><br />
+    <label>Mailing Address:</label>
+    <input type="text" @bind=address /><br />
+    <button @onclick="createGuest">create guest</button> <br />
+</section>
+
+<footer>
+    <a href="/">Home</a>
+    <a href="/logout">Logout</a>
+</footer>
+
+@code
+{
+    public string firstName = "";
+    public string lastName = "";
+    public uint phoneNumber = 0;
+    public string email = "";
+    public string address = "";
+    public string nameError = "";
+    public string phoneError = "";
+    public string emailError = "";
+    public void createGuest()
+    {
+        string[] result = SystemRunner.MakeGuest(firstName, lastName, phoneNumber, email, address);
+        nameError = result[0];
+        phoneError = result[1];
+        emailError = result[2];
+        if ((nameError == "") && (phoneError == "") && (emailError == ""))
+        {
+            NavManager.NavigateTo("/guests");
+        }
+    }
+}

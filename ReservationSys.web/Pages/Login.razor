@@ -1,0 +1,46 @@
+@page "/login"
+@using ReservationSystem;
+@inject NavigationManager NavManager
+
+<PageTitle>Login</PageTitle>
+<h1>Login</h1>
+
+@if(SystemRunner.LoggedIn)
+{
+    NavManager.NavigateTo("/");
+}
+
+@if (SystemRunner.UserList.Count < 1)
+{
+    <p>There were no accounts available, would you like to generate one?</p>
+    <p>Default information:</p>
+    <p>Username: Admin<br />Password: Password</p>
+    <button @onclick="makeAdmin" >Yes</button>
+    <a href="/">No, take me back</a>
+}
+
+<select @bind="selectedUser">
+@for (int i = 0; i < SystemRunner.UserList.Count; i ++)
+{
+    <option value=@SystemRunner.UserList[i].username>@SystemRunner.UserList[i].username</option>
+}
+</select>
+<input type="text" @bind="enteredPass" />
+<button @onclick="loginAttempt" >Submit</button>
+
+
+@code
+{
+    public string selectedUser = "";
+    public string enteredPass = "";
+
+    public void loginAttempt()
+    {
+        SystemRunner.LogIn(selectedUser, enteredPass);
+    }
+
+    public void makeAdmin()
+    {
+        SystemRunner.MakeAdmin("Admin", "Password");
+    }
+}

@@ -1,0 +1,84 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ReservationSystem
+build_property.RootNamespace = ReservationSystem
+build_property.ProjectDir = C:\Users\Lucas\code\Spring2022\ObjectOriented\ReservationSystem\ReservationSys.web\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Lucas\code\Spring2022\ObjectOriented\ReservationSystem\ReservationSys.web
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Pages/GuestPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcR3Vlc3RQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Pages/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Pages/NewGuest.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3R3Vlc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Pages/NewReservation.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3UmVzZXJ2YXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Pages/NewSite.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTmV3U2l0ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Pages/ReservationPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVzZXJ2YXRpb25QYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Pages/Sites.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2l0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-0vlwaurf9k
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-xeunyaftj8
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Lucas/code/Spring2022/ObjectOriented/ReservationSystem/ReservationSys.web/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,77 @@
+@page "/newSite"
+@using ReservationSystem;
+@inject NavigationManager NavManager;
+
+<PageTitle>New Site</PageTitle>
+<h1>Make a new Site</h1>
+
+<p>What type of site would you like to create?</p>
+<ol>
+    <li><button @onclick="makeNewTent">Tent Site</button></li>
+    <li><button @onclick="makeNewWE30">Water/Electric 30amps</button></li>
+    <li><button @onclick="makeNewWE50">Water/Electric 50 amps</button></li>
+    <li><button @onclick="makeNewFHU30">Full Hook-ups 30 amps</button></li>
+    <li><button @onclick="makeNewFHU50">Full Hook-ups 50 amps</button></li>
+    <li><button @onclick="makeNewFHUC">Full Hook-ups Cement</button></li>
+    <li><button @onclick="makeNewPT">Deluxe Pull-Through</button></li>
+    <li><button @onclick="makeNewGS">Group Site</button></li>
+</ol>
+<p>@message</p>
+
+<footer>
+    <a href="/">Home</a>
+    <a href="/logout">Logout</a>
+</footer>
+
+@code
+{
+    public string message = "";
+    public void makeNewTent()
+    {
+        SystemRunner.MakeNewTent();
+        message = "New site created successfully";
+        NavManager.NavigateTo("/sites");
+    }
+    public void makeNewWE30()
+    {
+        SystemRunner.MakeNewWE30();
+        message = "New site created successfully";
+        NavManager.NavigateTo("/sites");
+    }
+    public void makeNewWE50()
+    {
+        SystemRunner.MakeNewWE50();
+        message = "New site created successfully";
+        NavManager.NavigateTo("/sites");
+    }
+    public void makeNewFHU30()
+    {
+        SystemRunner.MakeNewFHU30();
+        message = "New site created successfully";
+        NavManager.NavigateTo("/sites");
+    }
+    public void makeNewFHU50()
+    {
+        SystemRunner.MakeNewFHU50();
+        message = "New site created successfully";
+        NavManager.NavigateTo("/sites");
+    }
+    public void makeNewFHUC()
+    {
+        SystemRunner.MakeNewFHUC();
+        message = "New site created successfully";
+        NavManager.NavigateTo("/sites");
+    }
+    public void makeNewPT()
+    {
+        SystemRunner.MakeNewPT();
+        message = "New site created successfully";
+        NavManager.NavigateTo("/sites");
+    }
+    public void makeNewGS()
+    {
+        SystemRunner.MakeNewGS();
+        message = "New site created successfully";
+        NavManager.NavigateTo("/sites");
+    }
+}

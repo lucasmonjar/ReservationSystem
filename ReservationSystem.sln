@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReservationSys", "ReservationSys\ReservationSys.csproj", "{51CA794B-C24C-4E52-8526-BA0568B23AFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReservationSystem", "ReservationSys.web\ReservationSystem.csproj", "{B938683D-BF11-4131-B0B4-8E938F89FF10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51CA794B-C24C-4E52-8526-BA0568B23AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CA794B-C24C-4E52-8526-BA0568B23AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51CA794B-C24C-4E52-8526-BA0568B23AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51CA794B-C24C-4E52-8526-BA0568B23AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B938683D-BF11-4131-B0B4-8E938F89FF10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B938683D-BF11-4131-B0B4-8E938F89FF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B938683D-BF11-4131-B0B4-8E938F89FF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B938683D-BF11-4131-B0B4-8E938F89FF10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,27 @@
+﻿@page "/"
+@using ReservationSystem;
+
+<PageTitle>Home Page</PageTitle>
+
+<h1>Welcome to Monjar Reservation System</h1>
+
+@if (SystemRunner.LoggedIn)
+{
+    <header>
+
+    </header>
+    <main>
+        <a href="/guests">Manage Guests</a><br />
+        <a href="/reservations">Manage Reservations</a><br />
+        <a href="/users">Manage Users</a><br />
+        <a href="/sites">Manage Site information</a><br />
+    </main>
+    <footer>
+        <a href="/logout">Logout</a>
+    </footer>
+}
+else
+{
+    <h2>Please login to begin</h2>
+    <a href="/Login">Login</a>
+}

@@ -1,0 +1,12 @@
+C:\Users\Lucas\code\Spring2022\ObjectOriented\ReservationSystem\ReservationSys\bin\Debug\net6.0\ReservationSys.deps.json
+C:\Users\Lucas\code\Spring2022\ObjectOriented\ReservationSystem\ReservationSys\bin\Debug\net6.0\ReservationSys.dll
+C:\Users\Lucas\code\Spring2022\ObjectOriented\ReservationSystem\ReservationSys\bin\Debug\net6.0\ReservationSys.pdb
+C:\Users\Lucas\code\Spring2022\ObjectOriented\ReservationSystem\ReservationSys\obj\Debug\net6.0\ReservationSys.csproj.AssemblyReference.cache
+C:\Users\Lucas\code\Spring2022\ObjectOriented\ReservationSystem\ReservationSys\obj\Debug\net6.0\ReservationSys.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lucas\code\Spring2022\ObjectOriented\ReservationSystem\ReservationSys\obj\Debug\net6.0\ReservationSys.AssemblyInfoInputs.cache
+C:\Users\Lucas\code\Spring2022\ObjectOriented\ReservationSystem\ReservationSys\obj\Debug\net6.0\ReservationSys.AssemblyInfo.cs
+C:\Users\Lucas\code\Spring2022\ObjectOriented\ReservationSystem\ReservationSys\obj\Debug\net6.0\ReservationSys.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\code\Spring2022\ObjectOriented\ReservationSystem\ReservationSys\obj\Debug\net6.0\ReservationSys.dll
+C:\Users\Lucas\code\Spring2022\ObjectOriented\ReservationSystem\ReservationSys\obj\Debug\net6.0\refint\ReservationSys.dll
+C:\Users\Lucas\code\Spring2022\ObjectOriented\ReservationSystem\ReservationSys\obj\Debug\net6.0\ReservationSys.pdb
+C:\Users\Lucas\code\Spring2022\ObjectOriented\ReservationSystem\ReservationSys\obj\Debug\net6.0\ref\ReservationSys.dll

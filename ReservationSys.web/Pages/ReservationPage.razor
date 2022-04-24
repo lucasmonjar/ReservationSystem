@@ -1,0 +1,101 @@
+@page "/reservations"
+@using ReservationSystem;
+
+<PageTitle>Reservation Management</PageTitle>
+
+<h1>Reservation Management</h1>
+
+
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        column-width: 20em;
+    }
+</style>
+
+<a href="/newReservation">Make a new Reservation</a>
+
+<hr />
+<h2>Reservation Information</h2>
+
+<label for="sortBy">Sort By:</label>
+<select @bind=sortBy>
+    <option value=0>Guest</option>
+    <option value=1>Site</option>
+    <option value=2>Site Type</option>
+    <option value=3>Arrival</option>
+    <option value=4>Departure</option>
+    <option value=5>Status</option>
+</select>
+<button @onclick=sort>Show Results</button>
+
+<table>
+    <thead>
+        <tr>
+            <td>Guest</td>
+            <td>Site</td>
+            <td>Site Type</td>
+            <td>Arrival</td>
+            <td>Departure</td>
+            <td>Status</td>
+        </tr>
+    </thead>
+    @for (int i = 0; i < sortedList.Count; i++)
+    {
+        <tr>
+            <td>@sortedList[i].Guest.LastName @sortedList[i].Guest.FirstName</td>
+            <td>@sortedList[i].Site.SiteNumber</td>
+            <td>@sortedList[i].Site.SiteType</td>
+            <td>@sortedList[i].Arrival</td>
+            <td>@sortedList[i].Departure</td>
+            <td>@sortedList[i].Status</td>
+        </tr>
+    }
+</table>
+
+<footer>
+    <a href="/">Home</a>
+    <a href="/logout">Logout</a>
+</footer>
+
+@code
+{
+    public int sortBy;
+    public List<IReservation> sortedList = new();
+    public void sort()
+    {
+        switch (sortBy)
+        {
+            case 0:
+                sortedList = SystemRunner.ReservationList.OrderBy(s => s.Guest.LastName).ToList();
+                break;
+            case 1:
+                sortedList = SystemRunner.ReservationList.OrderBy(s => s.Site.SiteNumber).ToList();
+                break;
+            case 2:
+                sortedList = SystemRunner.ReservationList.OrderBy(s => s.Site.SiteType).ToList();
+                break;
+            case 3:
+                sortedList = SystemRunner.ReservationList.OrderBy(s => s.Arrival).ToList();
+                break;
+            case 4:
+                sortedList = SystemRunner.ReservationList.OrderBy(s => s.Departure).ToList();
+                break;
+            case 5:
+                sortedList = SystemRunner.ReservationList.OrderBy(s => s.Status).ToList();
+                break;
+            default:
+                sortedList = SystemRunner.ReservationList.OrderBy(s => s.Guest.LastName).ToList();
+                break;
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        sortBy = 0;
+        sort();
+    }
+}

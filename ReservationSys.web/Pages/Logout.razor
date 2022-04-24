@@ -1,0 +1,25 @@
+@page "/logout"
+@using ReservationSystem;
+
+<PageTitle>Logout</PageTitle>
+<h1>Logout Page</h1>
+
+@if(SystemRunner.LoggedIn)
+{
+    <p>Are you sure you'd like to log out?</p>
+    <button @onclick="logout">Yes</button>
+    <a href="/">No, take me back</a>
+}
+else
+{
+    <p>You have successfully logged out, feel free to close this tab, or</p>
+    <a href="/">go back home</a>
+}
+
+@code
+{
+    public void logout()
+    {
+        SystemRunner.LoggedIn = false;
+    }
+}
