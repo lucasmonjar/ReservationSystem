@@ -1,0 +1,51 @@
+@page "/users"
+@using ReservationSystem;
+
+<PageTitle>User Management</PageTitle>
+<h1>Manage Users</h1>
+
+<a href="/newUser">Make a new User</a>
+<hr>
+
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        column-width: 20em;
+    }
+</style>
+
+<h2>User Information</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Option</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in SystemRunner.UserList)
+        {
+            <tr>
+                <td>@user.Username</td>
+                <td><button @onclick="() => removeUser(user)">Remove</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<footer>
+    <a href="/">Home</a>
+    <a href="/logout">Logout</a>
+</footer>
+
+@code
+{
+    public void removeUser(User user)
+    {
+        SystemRunner.RemoveUser(user);
+    }
+}

@@ -42,7 +42,7 @@ public class Guest : IGuest
     {
         FirstName = firstName;
         LastName = lastName;
-        GuestNumber = SystemRunner.NumGuests;
+        GuestNumber = SystemRunner.GuestList.Count();
         PhoneNumber = phoneNumber;
         Email = email;
         Address = address;

@@ -25,11 +25,6 @@
     <input type="DateTime" @bind=departureDate />
     <br />
 
-    <label>Number of Guests:</label>
-    <input type="number" @bind=numGuests />
-    <p style="color: red;">@numGuestsError</p>
-    <br />
-
     <button @onclick=makeReservation>Make Reservation</button>
 </section>
 
@@ -44,7 +39,6 @@
     public int siteNumber;
     public DateTime arrivalDate;
     public DateTime departureDate;
-    public int numGuests;
 
     public string guestError = "";
     public string siteError = "";
@@ -52,12 +46,11 @@
 
     public void makeReservation()
     {
-        string[] result = SystemRunner.MakeReservation(guestNumber, siteNumber, arrivalDate, departureDate, numGuests);
+        string[] result = SystemRunner.MakeReservation(guestNumber, siteNumber, arrivalDate, departureDate);
         guestError = result[0];
         siteError = result[1];
-        numGuestsError = result[2];
 
-        if ((guestError == "") && (siteError == "") && (numGuestsError == ""))
+        if ((guestError == "") && (siteError == ""))
         {
             NavManager.NavigateTo("/reservations");
         }

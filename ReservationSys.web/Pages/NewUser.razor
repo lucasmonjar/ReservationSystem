@@ -1,0 +1,24 @@
+@page "/newUser"
+@using ReservationSystem;
+@inject NavigationManager NavManager;
+
+<PageTitle>Make a new User</PageTitle>
+<h1>Make a new User</h1>
+
+<label>Username:</label>
+<input type="text" @bind="username">
+<label>Password:</label>
+<input type="text" @bind="password">
+<button @onclick="newUser">Submit</button>
+
+@code
+{
+    public string username = "";
+    public string password = "";
+
+    public void newUser()
+    {
+        SystemRunner.MakeUser(username, password);
+        NavManager.NavigateTo("/users");
+    }
+}

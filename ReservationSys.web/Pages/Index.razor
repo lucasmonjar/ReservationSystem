@@ -15,6 +15,8 @@
         <a href="/reservations">Manage Reservations</a><br />
         <a href="/users">Manage Users</a><br />
         <a href="/sites">Manage Site information</a><br />
+        <button @onclick="saveInfo">Save all information</button>
+        <p>@message</p>
     </main>
     <footer>
         <a href="/logout">Logout</a>
@@ -24,4 +26,14 @@ else
 {
     <h2>Please login to begin</h2>
     <a href="/Login">Login</a>
+}
+
+@code
+{
+    public string message = "";
+    public void saveInfo()
+    {
+        SystemRunner.SaveAllInfo();
+        message = "Information Saved";
+    }
 }

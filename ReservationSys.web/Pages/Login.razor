@@ -5,7 +5,7 @@
 <PageTitle>Login</PageTitle>
 <h1>Login</h1>
 
-@if(SystemRunner.LoggedIn)
+@if (SystemRunner.LoggedIn)
 {
     NavManager.NavigateTo("/");
 }
@@ -15,18 +15,22 @@
     <p>There were no accounts available, would you like to generate one?</p>
     <p>Default information:</p>
     <p>Username: Admin<br />Password: Password</p>
-    <button @onclick="makeAdmin" >Yes</button>
+    <button @onclick="makeAdmin">Yes</button>
+    @if (File.Exists("userList.json"))
+    {
+        <button @onclick="loadInfo">Load Previously saved information</button>
+    }
     <a href="/">No, take me back</a>
 }
 
 <select @bind="selectedUser">
-@for (int i = 0; i < SystemRunner.UserList.Count; i ++)
-{
-    <option value=@SystemRunner.UserList[i].username>@SystemRunner.UserList[i].username</option>
-}
+    @for (int i = 0; i < SystemRunner.UserList.Count; i++)
+    {
+        <option value=@SystemRunner.UserList[i].Username>@SystemRunner.UserList[i].Username</option>
+    }
 </select>
 <input type="text" @bind="enteredPass" />
-<button @onclick="loginAttempt" >Submit</button>
+<button @onclick="loginAttempt">Submit</button>
 
 
 @code
@@ -41,6 +45,11 @@
 
     public void makeAdmin()
     {
-        SystemRunner.MakeAdmin("Admin", "Password");
+        SystemRunner.MakeUser("Admin", "Password");
+    }
+
+    public void loadInfo()
+    {
+        SystemRunner.LoadAllInfo();
     }
 }

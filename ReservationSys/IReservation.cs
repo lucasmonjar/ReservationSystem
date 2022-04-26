@@ -16,12 +16,11 @@ public enum ReservationStatus
 }
 public interface IReservation
 {
-    IGuest Guest { get; }
-    ISite Site { get; }
+    Guest Guest { get; }
+    Site Site { get; }
     DateTime Arrival { get; }
     DateTime Departure { get; }
     ReservationStatus Status { get; }
-    int NumGuests { get; }
 
     bool CheckIn();
     bool CheckOut();
@@ -30,21 +29,17 @@ public interface IReservation
 
 public class Reservation : IReservation
 {
-    public IGuest Guest { get; private set; }
-    public ISite Site { get; private set; }
+    public Guest Guest { get; private set; }
+    public Site Site { get; private set; }
     public DateTime Arrival { get; private set; }
     public DateTime Departure { get; private set; }
     public ReservationStatus Status { get; private set; } = ReservationStatus.Confirmed;
-    public int NumGuests {get; private set;}
-
-    public Reservation(IGuest guest, ISite site, DateTime arrival, DateTime departure, int numGuests)
+    public Reservation(Guest guest, Site site, DateTime arrival, DateTime departure)
     {
         Guest = guest;
         Site = site;
         Arrival = arrival;
         Departure = departure;
-        NumGuests = numGuests;
-        SystemRunner.ReservationList.Add(this);
     }
 
     public bool CheckIn()

@@ -7,18 +7,22 @@ Spring 2022
 */
 namespace ReservationSystem;
 
-public struct User
+public class User
 {
-    public string username;
-    public string password;
+    public string Username { get; }
+    public string Password { get; }
+    public User(string username, string password)
+    {
+        Username = username;
+        Password = password;
+    }
 };
 
 public static class SystemRunner
 {
-    public static int NumGuests = 0;
-    public static List<IGuest> GuestList = new List<IGuest>();
-    public static List<ISite> SiteList = new List<ISite>();
-    public static List<IReservation> ReservationList = new List<IReservation>();
+    public static List<Guest> GuestList = new List<Guest>();
+    public static List<Site> SiteList = new List<Site>();
+    public static List<Reservation> ReservationList = new List<Reservation>();
     public static List<User> UserList = new List<User>();
     public static bool LoggedIn = false;
 
@@ -27,24 +31,26 @@ public static class SystemRunner
         int index = 0;
         for (int i = 0; i < UserList.Count; i++)
         {
-            if (selectedUser == UserList[i].username)
+            if (selectedUser == UserList[i].Username)
             {
                 index = i;
                 break;
             }
         }
-        if (enteredPass == UserList[index].password)
+        if (enteredPass == UserList[index].Password)
         {
             LoggedIn = true;
         }
     }
 
-    public static void MakeAdmin(string username, string password)
+    public static void MakeUser(string username, string password)
     {
-        User newAdmin;
-        newAdmin.username = username;
-        newAdmin.password = password;
+        User newAdmin = new User(username, password);
         UserList.Add(newAdmin);
+    }
+    public static void RemoveUser(User user)
+    {
+        UserList.Remove(user);
     }
 
     public static string[] MakeGuest(string firstName, string lastName, uint phoneNumber, string email, string address)
@@ -99,7 +105,6 @@ public static class SystemRunner
 
         if ((nameError == "") && (phoneError == "") && (emailError == ""))
         {
-            SystemRunner.NumGuests++;
             Guest newGuest = new Guest(firstName, lastName, phoneNumber, email, address);
             SystemRunner.GuestList.Add(newGuest);
         }
@@ -110,16 +115,15 @@ public static class SystemRunner
         return result;
     }
 
-    public static string[] MakeReservation(int guestNumber, int siteNumber, DateTime arrival, DateTime departure, int numGuests)
+    public static string[] MakeReservation(int guestNumber, int siteNumber, DateTime arrival, DateTime departure)
     {
-        string[] result = new string[3];
+        string[] result = new string[2];
         string guestError = "Please select a valid guest. You can find them on the Guest Management page.";
         string siteError = "Please select a valid site number. You can find them on the Site Management page.";
-        string numGuestsError = "";
-        ISite newResSite = new TentSite(0);
-        IGuest newResGuest = GuestList[0];
+        Site newResSite = new Site(0, SiteTypes.Tent, 0, 20, false, false);
+        Guest newResGuest = GuestList[0];
 
-        for (int i = 0; i < NumGuests; i++)
+        for (int i = 0; i < GuestList.Count(); i++)
         {
             if (guestNumber == GuestList[i].GuestNumber)
             {
@@ -137,60 +141,101 @@ public static class SystemRunner
                 break;
             }
         }
-        if (numGuests > newResSite.MaxGuests)
-        {
-            numGuestsError = $"Sorry you are only permitted {newResSite.MaxGuests} guests on your site.";
-        }
 
-        if ((guestError == "") && (siteError == "") && (numGuestsError == ""))
+        if ((guestError == "") && (siteError == ""))
         {
-            Reservation newRes = new Reservation(newResGuest, newResSite, arrival, departure, numGuests);
+            Reservation newRes = new Reservation(newResGuest, newResSite, arrival, departure);
             ReservationList.Add(newRes);
         }
         result[0] = guestError;
         result[1] = siteError;
-        result[2] = numGuestsError;
         return result;
     }
 
     public static void MakeNewTent()
     {
-        ISite newSite = new TentSite(SiteList.Count);
+        Site newSite = new Site(SiteList.Count, SiteTypes.Tent, 0, 20, false, false);
         SiteList.Add(newSite);
     }
     public static void MakeNewWE30()
     {
-        ISite newSite = new WaterElectric30(SiteList.Count, 50);
+        Site newSite = new Site(SiteList.Count, SiteTypes.WaterElectric30, 50, 30, false, false);
         SiteList.Add(newSite);
     }
     public static void MakeNewWE50()
     {
-        ISite newSite = new WaterElectric50(SiteList.Count, 50);
+        Site newSite = new Site(SiteList.Count, SiteTypes.WaterElectric50, 50, 50, false, false);
         SiteList.Add(newSite);
     }
     public static void MakeNewFHU30()
     {
-        ISite newSite = new FullHookUp30(SiteList.Count, 55);
+        Site newSite = new Site(SiteList.Count, SiteTypes.FullHookUp30, 55, 30, false, true);
         SiteList.Add(newSite);
     }
     public static void MakeNewFHU50()
     {
-        ISite newSite = new FullHookUp50(SiteList.Count, 55);
+        Site newSite = new Site(SiteList.Count, SiteTypes.FullHookUp50, 55, 50, false, true);
         SiteList.Add(newSite);
     }
     public static void MakeNewFHUC()
     {
-        ISite newSite = new FullHookUpCement(SiteList.Count, 60);
+        Site newSite = new Site(SiteList.Count, SiteTypes.FullHookUpCement, 60, 50, true, true);
         SiteList.Add(newSite);
     }
     public static void MakeNewPT()
     {
-        ISite newSite = new PullThrough(SiteList.Count, 70);
+        Site newSite = new Site(SiteList.Count, SiteTypes.PullThrough, 70, 50, true, true);
         SiteList.Add(newSite);
     }
     public static void MakeNewGS()
     {
-        ISite newSite = new GroupSite(SiteList.Count);
+        Site newSite = new Site(SiteList.Count, SiteTypes.GroupSite, 0, 30, false, false);
         SiteList.Add(newSite);
+    }
+
+    public static void SaveAllInfo()
+    {
+        JsonSerializedStorage StorageManager = new();
+        StorageManager.SaveGuests(GuestList);
+        StorageManager.SaveReservations(ReservationList);
+        StorageManager.SaveSites(SiteList);
+        StorageManager.SaveUsers(UserList);
+    }
+
+    public static void LoadAllInfo()
+    {
+        JsonSerializedStorage StorageManager = new();
+        GuestList = StorageManager.LoadGuests().ToList();
+        ReservationList = StorageManager.LoadReservations().ToList();
+        SiteList = StorageManager.LoadSites().ToList();
+        UserList = StorageManager.LoadUsers().ToList();
+    }
+
+    public static void CheckInRes(Reservation reservation)
+    {
+        reservation.CheckIn();
+    }
+    public static void CheckOutRes(Reservation reservation)
+    {
+        reservation.CheckOut();
+    }
+    public static void CancelRes(Reservation reservation)
+    {
+        reservation.CancelReservation();
+    }
+    public static void ClearDepartedRes()
+    {
+        List<Reservation> clearList = new();
+        foreach(var reservation in ReservationList)
+        {
+            if (reservation.Status == ReservationStatus.Cancelled || reservation.Status == ReservationStatus.Departed)
+            {
+                clearList.Add(reservation);
+            }
+        }
+        foreach(var reservation in clearList)
+        {
+            ReservationList.Remove(reservation);
+        }
     }
 }

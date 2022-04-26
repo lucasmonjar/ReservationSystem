@@ -41,20 +41,26 @@
             <td>Arrival</td>
             <td>Departure</td>
             <td>Status</td>
+            <td colspan="3">Reservation Options</td>
         </tr>
     </thead>
-    @for (int i = 0; i < sortedList.Count; i++)
+    @foreach (var reservation in sortedList)
     {
         <tr>
-            <td>@sortedList[i].Guest.LastName @sortedList[i].Guest.FirstName</td>
-            <td>@sortedList[i].Site.SiteNumber</td>
-            <td>@sortedList[i].Site.SiteType</td>
-            <td>@sortedList[i].Arrival</td>
-            <td>@sortedList[i].Departure</td>
-            <td>@sortedList[i].Status</td>
+            <td>@reservation.Guest.LastName @reservation.Guest.FirstName</td>
+            <td>@reservation.Site.SiteNumber</td>
+            <td>@reservation.Site.SiteType</td>
+            <td>@reservation.Arrival</td>
+            <td>@reservation.Departure</td>
+            <td>@reservation.Status</td>
+            <td><button @onclick="() => checkIn(reservation)">Check In</button></td>
+            <td><button @onclick="() => checkOut(reservation)">Check Out</button></td>
+            <td><button @onclick="() => cancel(reservation)">Cancel Reservation</button></td>
         </tr>
     }
 </table>
+<button @onclick="clearGone">Clear Departed and Cancelled Reservations</button>
+
 
 <footer>
     <a href="/">Home</a>
@@ -64,7 +70,7 @@
 @code
 {
     public int sortBy;
-    public List<IReservation> sortedList = new();
+    public List<Reservation> sortedList = new();
     public void sort()
     {
         switch (sortBy)
@@ -91,6 +97,26 @@
                 sortedList = SystemRunner.ReservationList.OrderBy(s => s.Guest.LastName).ToList();
                 break;
         }
+    }
+
+    public void checkIn(Reservation reservation)
+    {
+        SystemRunner.CheckInRes(reservation);
+
+    }
+    public void checkOut(Reservation reservation)
+    {
+        SystemRunner.CheckOutRes(reservation);
+    }
+    public void cancel(Reservation reservation)
+    {
+        SystemRunner.CancelRes(reservation);
+    }
+
+    public void clearGone()
+    {
+        SystemRunner.ClearDepartedRes();
+        sort();
     }
 
     protected override async Task OnInitializedAsync()
