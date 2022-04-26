@@ -11,14 +11,12 @@
 <section>
     <label>Guest Account Number:</label>
     <input type="number" @bind=guestNumber />
-    <p style="color: red;">@guestError</p>
     <br />
 
     <label>Site Number:</label>
     <input type="number" @bind=siteNumber />
-    <p style="color: red;">@siteError</p>
     <br />
-    
+
     <label>Arrival Date:</label>
     <input type="DateTime" @bind=arrivalDate />
     <label>Departure Date:</label>
@@ -26,6 +24,7 @@
     <br />
 
     <button @onclick=makeReservation>Make Reservation</button>
+    <p style="color: red;">@message</p>
 </section>
 
 <footer>
@@ -40,19 +39,18 @@
     public DateTime arrivalDate;
     public DateTime departureDate;
 
-    public string guestError = "";
-    public string siteError = "";
-    public string numGuestsError = "";
+    public string message = "";
 
     public void makeReservation()
     {
-        string[] result = SystemRunner.MakeReservation(guestNumber, siteNumber, arrivalDate, departureDate);
-        guestError = result[0];
-        siteError = result[1];
-
-        if ((guestError == "") && (siteError == ""))
+        bool result = SystemRunner.MakeReservation(guestNumber, siteNumber, arrivalDate, departureDate);
+        if (result)
         {
             NavManager.NavigateTo("/reservations");
+        }
+        else
+        {
+            message = "Make sure you entered a valid guest numbe and valid site number, then try again";
         }
     }
 }

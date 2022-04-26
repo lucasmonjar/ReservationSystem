@@ -177,39 +177,6 @@
         }
       },
       {
-        "HashCode": 1426854788,
-        "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.NewReservation",
-        "AssemblyName": "ReservationSystem",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NewReservation"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.NewReservation"
-        }
-      },
-      {
-        "HashCode": -1443363027,
-        "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.NewReservation",
-        "AssemblyName": "ReservationSystem",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ReservationSystem.Pages.NewReservation"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.NewReservation",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 2107632784,
         "Kind": "Components.Component",
         "Name": "ReservationSystem.Pages.ReservationPage",
@@ -375,35 +342,35 @@
         }
       },
       {
-        "HashCode": -2055666548,
+        "HashCode": 1426854788,
         "Kind": "Components.Component",
-        "Name": "ReservationSystem.App",
+        "Name": "ReservationSystem.Pages.NewReservation",
         "AssemblyName": "ReservationSystem",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "NewReservation"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.App"
+          "Common.TypeName": "ReservationSystem.Pages.NewReservation"
         }
       },
       {
-        "HashCode": 1901752833,
+        "HashCode": -1443363027,
         "Kind": "Components.Component",
-        "Name": "ReservationSystem.App",
+        "Name": "ReservationSystem.Pages.NewReservation",
         "AssemblyName": "ReservationSystem",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ReservationSystem.App"
+            "TagName": "ReservationSystem.Pages.NewReservation"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.App",
+          "Common.TypeName": "ReservationSystem.Pages.NewReservation",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -461,6 +428,102 @@
         }
       },
       {
+        "HashCode": 1229290703,
+        "Kind": "Components.Component",
+        "Name": "ReservationSystem.Shared.MainLayout",
+        "AssemblyName": "ReservationSystem",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MainLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ReservationSystem.Shared.MainLayout"
+        }
+      },
+      {
+        "HashCode": -932096232,
+        "Kind": "Components.Component",
+        "Name": "ReservationSystem.Shared.MainLayout",
+        "AssemblyName": "ReservationSystem",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ReservationSystem.Shared.MainLayout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Body",
+            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
+            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+            "Metadata": {
+              "Common.PropertyName": "Body",
+              "Components.ChildContent": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ReservationSystem.Shared.MainLayout",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1147131003,
+        "Kind": "Components.ChildContent",
+        "Name": "ReservationSystem.Shared.MainLayout.Body",
+        "AssemblyName": "ReservationSystem",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "MainLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "ReservationSystem.Shared.MainLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent"
+        }
+      },
+      {
+        "HashCode": -543439719,
+        "Kind": "Components.ChildContent",
+        "Name": "ReservationSystem.Shared.MainLayout.Body",
+        "AssemblyName": "ReservationSystem",
+        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Body",
+            "ParentTag": "ReservationSystem.Shared.MainLayout"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.None",
+          "Common.TypeName": "ReservationSystem.Shared.MainLayout.Body",
+          "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 1335229203,
         "Kind": "Components.Component",
         "Name": "ReservationSystem.Shared.NavMenu",
@@ -490,6 +553,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "ReservationSystem.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -2055666548,
+        "Kind": "Components.Component",
+        "Name": "ReservationSystem.App",
+        "AssemblyName": "ReservationSystem",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ReservationSystem.App"
+        }
+      },
+      {
+        "HashCode": 1901752833,
+        "Kind": "Components.Component",
+        "Name": "ReservationSystem.App",
+        "AssemblyName": "ReservationSystem",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ReservationSystem.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ReservationSystem.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

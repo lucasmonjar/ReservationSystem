@@ -84,7 +84,6 @@ public static class SystemRunner
             nameError = "";
         }
 
-
         if (phoneNumber.ToString().Length != 10)
         {
             phoneError = "Please enter a valid phone number.";
@@ -115,19 +114,18 @@ public static class SystemRunner
         return result;
     }
 
-    public static string[] MakeReservation(int guestNumber, int siteNumber, DateTime arrival, DateTime departure)
+    public static bool MakeReservation(int guestNumber, int siteNumber, DateTime arrival, DateTime departure)
     {
-        string[] result = new string[2];
-        string guestError = "Please select a valid guest. You can find them on the Guest Management page.";
-        string siteError = "Please select a valid site number. You can find them on the Site Management page.";
-        Site newResSite = new Site(0, SiteTypes.Tent, 0, 20, false, false);
-        Guest newResGuest = GuestList[0];
+        bool validGuest = false;
+        bool validSite = false;
+        Site newResSite = new Site(0, SiteTypes.Tent, 0, 0, false, false);
+        Guest newResGuest = new Guest("", "", 0, "", "");
 
         for (int i = 0; i < GuestList.Count(); i++)
         {
             if (guestNumber == GuestList[i].GuestNumber)
             {
-                guestError = "";
+                validGuest = true;
                 newResGuest = GuestList[i];
                 break;
             }
@@ -136,20 +134,19 @@ public static class SystemRunner
         {
             if (siteNumber == SiteList[i].SiteNumber)
             {
-                siteError = "";
+                validSite = true;
                 newResSite = SiteList[i];
                 break;
             }
         }
 
-        if ((guestError == "") && (siteError == ""))
+        if (validGuest && validSite)
         {
             Reservation newRes = new Reservation(newResGuest, newResSite, arrival, departure);
             ReservationList.Add(newRes);
+            return true;
         }
-        result[0] = guestError;
-        result[1] = siteError;
-        return result;
+        return false;
     }
 
     public static bool MakeNewTent(int siteNumber)
