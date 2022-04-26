@@ -5,7 +5,9 @@
 <PageTitle>New Site</PageTitle>
 <h1>Make a new Site</h1>
 
-<p>What type of site would you like to create?</p>
+<p>Please input the site number and select the button for the type of site you'd like to create</p>
+<input type="number" @bind="siteNumber">
+<p style="color: red;">@message</p>
 <ol>
     <li><button @onclick="makeNewTent">Tent Site</button></li>
     <li><button @onclick="makeNewWE30">Water/Electric 30amps</button></li>
@@ -16,7 +18,6 @@
     <li><button @onclick="makeNewPT">Deluxe Pull-Through</button></li>
     <li><button @onclick="makeNewGS">Group Site</button></li>
 </ol>
-<p>@message</p>
 
 <footer>
     <a href="/">Home</a>
@@ -25,53 +26,70 @@
 
 @code
 {
+    public int siteNumber = 0;
     public string message = "";
     public void makeNewTent()
     {
-        SystemRunner.MakeNewTent();
-        message = "New site created successfully";
-        NavManager.NavigateTo("/sites");
+        if (SystemRunner.MakeNewTent(siteNumber))
+        {
+            NavManager.NavigateTo("/sites");
+        }
+        message = "Please enter a positive number that is not already used.";
     }
     public void makeNewWE30()
     {
-        SystemRunner.MakeNewWE30();
-        message = "New site created successfully";
-        NavManager.NavigateTo("/sites");
+        if (SystemRunner.MakeNewWE30(siteNumber))
+        {
+            NavManager.NavigateTo("/sites");
+        }
+        message = "Please enter a positive number that is not already used.";
     }
     public void makeNewWE50()
     {
-        SystemRunner.MakeNewWE50();
-        message = "New site created successfully";
-        NavManager.NavigateTo("/sites");
+        if (SystemRunner.MakeNewWE50(siteNumber))
+        {
+            NavManager.NavigateTo("/sites");
+        }
+        message = "Please enter a positive number that is not already used.";
     }
     public void makeNewFHU30()
     {
-        SystemRunner.MakeNewFHU30();
-        message = "New site created successfully";
-        NavManager.NavigateTo("/sites");
+        if (SystemRunner.MakeNewFHU30(siteNumber))
+        {
+            NavManager.NavigateTo("/sites");
+        }
+        message = "Please enter a positive number that is not already used.";
     }
     public void makeNewFHU50()
     {
-        SystemRunner.MakeNewFHU50();
-        message = "New site created successfully";
-        NavManager.NavigateTo("/sites");
+        if (SystemRunner.MakeNewFHU50(siteNumber))
+        {
+            NavManager.NavigateTo("/sites");
+        }
+        message = "Please enter a positive number that is not already used.";
     }
     public void makeNewFHUC()
     {
-        SystemRunner.MakeNewFHUC();
-        message = "New site created successfully";
-        NavManager.NavigateTo("/sites");
+        if (SystemRunner.MakeNewFHUC(siteNumber))
+        {
+            NavManager.NavigateTo("/sites");
+        }
+        message = "Please enter a positive number that is not already used.";
     }
     public void makeNewPT()
     {
-        SystemRunner.MakeNewPT();
-        message = "New site created successfully";
-        NavManager.NavigateTo("/sites");
+        if (SystemRunner.MakeNewPT(siteNumber))
+        {
+            NavManager.NavigateTo("/sites");
+        }
+        message = "Please enter a positive number that is not already used.";
     }
     public void makeNewGS()
     {
-        SystemRunner.MakeNewGS();
-        message = "New site created successfully";
-        NavManager.NavigateTo("/sites");
+        if (SystemRunner.MakeNewGS(siteNumber))
+        {
+            NavManager.NavigateTo("/sites");
+        }
+        message = "Please enter a positive number that is not already used.";
     }
 }

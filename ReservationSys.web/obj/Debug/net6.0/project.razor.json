@@ -12,6 +12,105 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
+        "HashCode": -158904698,
+        "Kind": "Components.Component",
+        "Name": "ReservationSystem.Pages.GuestPage",
+        "AssemblyName": "ReservationSystem",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "GuestPage"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ReservationSystem.Pages.GuestPage"
+        }
+      },
+      {
+        "HashCode": 314795450,
+        "Kind": "Components.Component",
+        "Name": "ReservationSystem.Pages.GuestPage",
+        "AssemblyName": "ReservationSystem",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ReservationSystem.Pages.GuestPage"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ReservationSystem.Pages.GuestPage",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1290212768,
+        "Kind": "Components.Component",
+        "Name": "ReservationSystem.Pages.Index",
+        "AssemblyName": "ReservationSystem",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ReservationSystem.Pages.Index"
+        }
+      },
+      {
+        "HashCode": 1755111482,
+        "Kind": "Components.Component",
+        "Name": "ReservationSystem.Pages.Index",
+        "AssemblyName": "ReservationSystem",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ReservationSystem.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ReservationSystem.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 535264621,
+        "Kind": "Components.Component",
+        "Name": "ReservationSystem.Pages.Login",
+        "AssemblyName": "ReservationSystem",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Login"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ReservationSystem.Pages.Login"
+        }
+      },
+      {
+        "HashCode": -1735829880,
+        "Kind": "Components.Component",
+        "Name": "ReservationSystem.Pages.Login",
+        "AssemblyName": "ReservationSystem",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ReservationSystem.Pages.Login"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ReservationSystem.Pages.Login",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -1645666468,
         "Kind": "Components.Component",
         "Name": "ReservationSystem.Pages.Logout",
@@ -78,68 +177,35 @@
         }
       },
       {
-        "HashCode": 1696299648,
+        "HashCode": 1426854788,
         "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.NewSite",
+        "Name": "ReservationSystem.Pages.NewReservation",
         "AssemblyName": "ReservationSystem",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NewSite"
+            "TagName": "NewReservation"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.NewSite"
+          "Common.TypeName": "ReservationSystem.Pages.NewReservation"
         }
       },
       {
-        "HashCode": -1862845166,
+        "HashCode": -1443363027,
         "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.NewSite",
+        "Name": "ReservationSystem.Pages.NewReservation",
         "AssemblyName": "ReservationSystem",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ReservationSystem.Pages.NewSite"
+            "TagName": "ReservationSystem.Pages.NewReservation"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.NewSite",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 289911079,
-        "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.Sites",
-        "AssemblyName": "ReservationSystem",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Sites"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.Sites"
-        }
-      },
-      {
-        "HashCode": 1090136405,
-        "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.Sites",
-        "AssemblyName": "ReservationSystem",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ReservationSystem.Pages.Sites"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.Sites",
+          "Common.TypeName": "ReservationSystem.Pages.NewReservation",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -177,134 +243,68 @@
         }
       },
       {
-        "HashCode": -158904698,
+        "HashCode": 289911079,
         "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.GuestPage",
+        "Name": "ReservationSystem.Pages.Sites",
         "AssemblyName": "ReservationSystem",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "GuestPage"
+            "TagName": "Sites"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.GuestPage"
+          "Common.TypeName": "ReservationSystem.Pages.Sites"
         }
       },
       {
-        "HashCode": 314795450,
+        "HashCode": 1090136405,
         "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.GuestPage",
+        "Name": "ReservationSystem.Pages.Sites",
         "AssemblyName": "ReservationSystem",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ReservationSystem.Pages.GuestPage"
+            "TagName": "ReservationSystem.Pages.Sites"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.GuestPage",
+          "Common.TypeName": "ReservationSystem.Pages.Sites",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": 535264621,
+        "HashCode": 531502092,
         "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.Login",
+        "Name": "ReservationSystem.Pages.UsersPage",
         "AssemblyName": "ReservationSystem",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Login"
+            "TagName": "UsersPage"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.Login"
+          "Common.TypeName": "ReservationSystem.Pages.UsersPage"
         }
       },
       {
-        "HashCode": -1735829880,
+        "HashCode": 1370436979,
         "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.Login",
+        "Name": "ReservationSystem.Pages.UsersPage",
         "AssemblyName": "ReservationSystem",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ReservationSystem.Pages.Login"
+            "TagName": "ReservationSystem.Pages.UsersPage"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.Login",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -1290212768,
-        "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.Index",
-        "AssemblyName": "ReservationSystem",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 1755111482,
-        "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.Index",
-        "AssemblyName": "ReservationSystem",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ReservationSystem.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1426854788,
-        "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.NewReservation",
-        "AssemblyName": "ReservationSystem",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NewReservation"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.NewReservation"
-        }
-      },
-      {
-        "HashCode": -1443363027,
-        "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.NewReservation",
-        "AssemblyName": "ReservationSystem",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ReservationSystem.Pages.NewReservation"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.NewReservation",
+          "Common.TypeName": "ReservationSystem.Pages.UsersPage",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -342,35 +342,35 @@
         }
       },
       {
-        "HashCode": 531502092,
+        "HashCode": 1696299648,
         "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.UsersPage",
+        "Name": "ReservationSystem.Pages.NewSite",
         "AssemblyName": "ReservationSystem",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "UsersPage"
+            "TagName": "NewSite"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.UsersPage"
+          "Common.TypeName": "ReservationSystem.Pages.NewSite"
         }
       },
       {
-        "HashCode": 1370436979,
+        "HashCode": -1862845166,
         "Kind": "Components.Component",
-        "Name": "ReservationSystem.Pages.UsersPage",
+        "Name": "ReservationSystem.Pages.NewSite",
         "AssemblyName": "ReservationSystem",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ReservationSystem.Pages.UsersPage"
+            "TagName": "ReservationSystem.Pages.NewSite"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Pages.UsersPage",
+          "Common.TypeName": "ReservationSystem.Pages.NewSite",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -490,102 +490,6 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "ReservationSystem.Shared.NavMenu",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1229290703,
-        "Kind": "Components.Component",
-        "Name": "ReservationSystem.Shared.MainLayout",
-        "AssemblyName": "ReservationSystem",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "MainLayout"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-            "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Shared.MainLayout"
-        }
-      },
-      {
-        "HashCode": -932096232,
-        "Kind": "Components.Component",
-        "Name": "ReservationSystem.Shared.MainLayout",
-        "AssemblyName": "ReservationSystem",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ReservationSystem.Shared.MainLayout"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "Body",
-            "TypeName": "Microsoft.AspNetCore.Components.RenderFragment",
-            "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-            "Metadata": {
-              "Common.PropertyName": "Body",
-              "Components.ChildContent": "True"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ReservationSystem.Shared.MainLayout",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1147131003,
-        "Kind": "Components.ChildContent",
-        "Name": "ReservationSystem.Shared.MainLayout.Body",
-        "AssemblyName": "ReservationSystem",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Body",
-            "ParentTag": "MainLayout"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "ReservationSystem.Shared.MainLayout.Body",
-          "Components.IsSpecialKind": "Components.ChildContent"
-        }
-      },
-      {
-        "HashCode": -543439719,
-        "Kind": "Components.ChildContent",
-        "Name": "ReservationSystem.Shared.MainLayout.Body",
-        "AssemblyName": "ReservationSystem",
-        "Documentation": "\n            <summary>\n            Gets the content to be rendered inside the layout.\n            </summary>\n        ",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Body",
-            "ParentTag": "ReservationSystem.Shared.MainLayout"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.None",
-          "Common.TypeName": "ReservationSystem.Shared.MainLayout.Body",
-          "Components.IsSpecialKind": "Components.ChildContent",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

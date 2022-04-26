@@ -152,45 +152,101 @@ public static class SystemRunner
         return result;
     }
 
-    public static void MakeNewTent()
+    public static bool MakeNewTent(int siteNumber)
     {
-        Site newSite = new Site(SiteList.Count, SiteTypes.Tent, 0, 20, false, false);
-        SiteList.Add(newSite);
+        if (ValidSiteNumber(siteNumber))
+        {
+            Site newSite = new Site(SiteList.Count, SiteTypes.Tent, 0, 20, false, false);
+            SiteList.Add(newSite);
+            return true;
+        }
+        return false;
     }
-    public static void MakeNewWE30()
+    public static bool MakeNewWE30(int siteNumber)
     {
-        Site newSite = new Site(SiteList.Count, SiteTypes.WaterElectric30, 50, 30, false, false);
-        SiteList.Add(newSite);
+        if (ValidSiteNumber(siteNumber))
+        {
+            Site newSite = new Site(SiteList.Count, SiteTypes.WaterElectric30, 50, 30, false, false);
+            SiteList.Add(newSite);
+            return true;
+        }
+        return false;
     }
-    public static void MakeNewWE50()
+    public static bool MakeNewWE50(int siteNumber)
     {
-        Site newSite = new Site(SiteList.Count, SiteTypes.WaterElectric50, 50, 50, false, false);
-        SiteList.Add(newSite);
+        if (ValidSiteNumber(siteNumber))
+        {
+            Site newSite = new Site(SiteList.Count, SiteTypes.WaterElectric50, 50, 50, false, false);
+            SiteList.Add(newSite);
+            return true;
+        }
+        return false;
     }
-    public static void MakeNewFHU30()
+    public static bool MakeNewFHU30(int siteNumber)
     {
-        Site newSite = new Site(SiteList.Count, SiteTypes.FullHookUp30, 55, 30, false, true);
-        SiteList.Add(newSite);
+        if (ValidSiteNumber(siteNumber))
+        {
+            Site newSite = new Site(SiteList.Count, SiteTypes.FullHookUp30, 55, 30, false, true);
+            SiteList.Add(newSite);
+            return true;
+        }
+        return false;
     }
-    public static void MakeNewFHU50()
+    public static bool MakeNewFHU50(int siteNumber)
     {
-        Site newSite = new Site(SiteList.Count, SiteTypes.FullHookUp50, 55, 50, false, true);
-        SiteList.Add(newSite);
+        if (ValidSiteNumber(siteNumber))
+        {
+            Site newSite = new Site(SiteList.Count, SiteTypes.FullHookUp50, 55, 50, false, true);
+            SiteList.Add(newSite);
+            return true;
+        }
+        return false;
     }
-    public static void MakeNewFHUC()
+    public static bool MakeNewFHUC(int siteNumber)
     {
-        Site newSite = new Site(SiteList.Count, SiteTypes.FullHookUpCement, 60, 50, true, true);
-        SiteList.Add(newSite);
+        if (ValidSiteNumber(siteNumber))
+        {
+            Site newSite = new Site(SiteList.Count, SiteTypes.FullHookUpCement, 60, 50, true, true);
+            SiteList.Add(newSite);
+            return true;
+        }
+        return false;
     }
-    public static void MakeNewPT()
+    public static bool MakeNewPT(int siteNumber)
     {
-        Site newSite = new Site(SiteList.Count, SiteTypes.PullThrough, 70, 50, true, true);
-        SiteList.Add(newSite);
+        if (ValidSiteNumber(siteNumber))
+        {
+            Site newSite = new Site(SiteList.Count, SiteTypes.PullThrough, 70, 50, true, true);
+            SiteList.Add(newSite);
+            return true;
+        }
+        return false;
     }
-    public static void MakeNewGS()
+    public static bool MakeNewGS(int siteNumber)
     {
-        Site newSite = new Site(SiteList.Count, SiteTypes.GroupSite, 0, 30, false, false);
-        SiteList.Add(newSite);
+        if (ValidSiteNumber(siteNumber))
+        {
+            Site newSite = new Site(SiteList.Count, SiteTypes.GroupSite, 0, 30, false, false);
+            SiteList.Add(newSite);
+            return true;
+        }
+        return false;
+    }
+
+    public static bool ValidSiteNumber(int siteNumber)
+    {
+        for (int i = 0; i < SiteList.Count(); i++)
+        {
+            if (siteNumber == SiteList[i].SiteNumber)
+            {
+                return false;
+            }
+        }
+        if (siteNumber < 0)
+        {
+            return false;
+        }
+        return true;
     }
 
     public static void SaveAllInfo()
@@ -226,14 +282,14 @@ public static class SystemRunner
     public static void ClearDepartedRes()
     {
         List<Reservation> clearList = new();
-        foreach(var reservation in ReservationList)
+        foreach (var reservation in ReservationList)
         {
             if (reservation.Status == ReservationStatus.Cancelled || reservation.Status == ReservationStatus.Departed)
             {
                 clearList.Add(reservation);
             }
         }
-        foreach(var reservation in clearList)
+        foreach (var reservation in clearList)
         {
             ReservationList.Remove(reservation);
         }
